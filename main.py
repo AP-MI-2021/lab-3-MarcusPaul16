@@ -11,11 +11,6 @@ def prime(n):
 
 
 def is_square(n: int):
-    '''
-    Determina daca un numar este patrat perfect
-    :param n: nr intreg
-    :return: bool, daca e patrat perfect, returneaza true, altfel, returneaza false
-    '''
     if sqrt(n) == int(sqrt(n)):
         return True
     else:
@@ -23,11 +18,6 @@ def is_square(n: int):
 
 
 def bits_number(n: int):
-    """
-    returneaza numarul de biti de 1, in reprezentarea binara a lui n
-    :param n: nr intreg
-    :return: returneaza nr de biti de 1
-    """
     count = 0
     while n != 0:
         if n % 2 == 1:
@@ -57,11 +47,6 @@ def get_longest_all_primes(lst: list[int]):
 
 
 def get_longest_all_perfect_squares(lst: list[int]):
-    """
-    Determina cea mai launga secventa de numere situate consecutiv in lista, care sunt patrate perfecte
-    :param lst: lista cu numere elemente numere intregi
-    :return: o lista, care contine cea mai lunga secventa de numere, aflate pe pozitii consecutive in lista initiala,  care sunt patrate perfecte
-    """
     inceput = 0
     final = 0
     count = 0
@@ -90,11 +75,6 @@ def get_longest_all_perfect_squares(lst: list[int]):
 
 
 def get_longest_same_bit_counts(lst: list[int]):
-    """
-    Cauta cea mai launga secventa de numere, aflate pe indici consecutivi in lista initiala, care au acelasi  numar de bitsi de 1
-    :param lst: lista cu elementele, de tip intre
-    :return: o lista, care contine cea mai lunga secventa de nr cu acelasi numar de bitsi de 1
-    """
     if lst == []:
         return None
     first_number = bits_number(lst[0])
